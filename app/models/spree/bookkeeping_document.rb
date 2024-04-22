@@ -22,6 +22,14 @@ module Spree
     before_create :copy_view_attributes
     after_save :after_save_actions
 
+    def self.ransackable_attributes(auth_object = nil)
+      ["email", "firstname", "id", "lastname", "number", "total", "updated_at", "created_at"]
+    end
+
+    def self.ransackable_associations(auth_object = nil)
+      []
+    end
+    
     # An instance of Spree::Printable::#{YourModel}::#{YourTemplate}Presenter
     #
     def view
