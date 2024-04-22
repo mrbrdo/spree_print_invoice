@@ -1,5 +1,5 @@
 Spree::Core::Engine.add_routes do
-  namespace :admin do
+  namespace :admin, path: Spree.admin_path do
     # https://github.com/spree/spree/blob/3-0-stable/backend/config/routes.rb#L73
     resources :orders do
       resources :bookkeeping_documents, only: :index do
