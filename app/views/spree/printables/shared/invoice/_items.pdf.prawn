@@ -15,7 +15,7 @@ invoice.items.each do |item|
     item.options_text,
     item.display_price.to_s,
     item.quantity,
-    item.display_total.to_s
+    item.display_amount.to_s
   ]
   data += [row]
 end

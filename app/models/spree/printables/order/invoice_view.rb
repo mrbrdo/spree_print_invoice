@@ -18,7 +18,8 @@ module Spree
           options_text: item.variant.options_text,
           price: item.price,
           quantity: item.quantity,
-          total: item.total
+          total: item.total,
+          amount: item.amount
         )
       end
     end
